@@ -19,7 +19,7 @@ job('NodeJS example') {
 
 job('NodeJS example-2') {
     scm {
-        git('git://github.com/wardviaene/docker-demo.git') {  node -> // is hudson.plugins.git.GitSCM
+        git('https://github.com/stavalon1/docker-cicd.git') {  node -> // is hudson.plugins.git.GitSCM
             node / gitConfigName('DSL yaniv')
             node / gitConfigEmail('jenkins-dsl@newtech.academy')
         }
@@ -32,6 +32,6 @@ job('NodeJS example-2') {
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
     steps {
-        shell("npm install")
+        shell("docker run -it alpine echo hello from stav")
     }
 }
