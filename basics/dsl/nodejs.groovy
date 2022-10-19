@@ -32,6 +32,6 @@ job('NodeJS example-2') {
                          // Manage Jenkins -> Configure Tools -> NodeJS Installations -> Name
     }
     steps {
-        shell("docker run -it alpine echo hello from stav")
+        shell("docker build")
     }
 }
